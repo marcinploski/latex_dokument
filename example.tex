@@ -1,0 +1,106 @@
+\documentclass[11pt,twoside,a4paper]{article}
+\usepackage[left=20mm, top=20mm, bottom=20mm, right=20mm]{geometry}
+\usepackage{latexsym}
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+
+% dokument w języku polskim
+\usepackage[polish]{babel} 
+\usepackage[MeX]{polski} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% wykorzystanie grafiki
+\usepackage{graphicx}
+\graphicspath{ {img/} }
+
+% wzory matematyczne
+\usepackage{amsmath}
+
+% bibliografia
+\usepackage{biblatex}
+
+\author{Marcin Płoski}
+
+\begin{document}
+\title{Przykładowy dokument w Latex}
+\maketitle
+
+\section{Formatowanie tekstu}
+	Inwokacja to apostrofa, najczęściej rozbudowana, otwierająca utwór literacki – w tym wypadku epopeję jaką jest Pan Tadeusz Adama Mickiewicza:	
+	\textsl{Litwo! Ojczyzno moja! Ty jesteś jak zdrowie,
+Ile cię trzeba cenić, ten tylko się dowie,
+Kto cię stracił. Dziś piękność twą w całej ozdobie
+Widzę i opisuję, bo tęsknię po tobie
+Panno święta, co Jasnej bronisz Częstochowy
+I w Ostrej świecisz Bramie! Ty, co gród zamkowy
+Nowogródzki ochraniasz z jego wiernym ludem!
+Jak mnie dziecko do zdrowia powróciłaś cudem,
+(Gdy od płaczącej matki pod Twoją opiekę
+Ofiarowany, martwą podniosłem powiekę
+I zaraz mogłem pieszo do Twych świątyń progu
+Iść za wrócone życie podziękować Bogu),
+Tak nas powrócisz cudem na Ojczyzny łono.
+Tymczasem przenoś moją duszę utęsknioną
+Do tych pagórków leśnych, do tych łąk zielonych,
+Szeroko nad błękitnym Niemnem rozciągnionych;
+Do tych pól malowanych zbożem rozmaitem,\newline
+Wyzłacanych pszenicą, posrebrzanych żytem;
+Gdzie bursztynowy świerzop, gryka jak śnieg biała,
+Gdzie panieńskim rumieńcem dzięcielina pała,
+A wszystko przepasane jakby wstęgą, miedzą
+Zieloną, na niej z rzadka ciche grusze siedzą.}
+
+\section{Równanie matematyczne}
+\begin{center}
+Przykład równania w jednej linii - twierdzenie Pitagorasa:\newline
+$a^2 + b^2 = c^2$
+\end{center}
+
+\begin{center}
+Bardziej rozbudowane równanie:\newline
+\begin{equation*}
+\lim_{n \to \infty}
+\sum_{k=1}^n \frac{1}{k^2}
+= \frac{\pi^2}{6}
+\end{equation*}
+\end{center}
+
+\begin{center}
+Wykorzystanie array w równaniu matematycznym:
+\begin{equation*}
+\label{eq:funkcjaf}
+f(x) = \left\lbrace
+\begin{array}{rcl}
+-x^2 & \text{dla} & x < 0,\\
+\sqrt{x} + \sin x & \text{dla} & x > 0.
+\end{array}
+\right.
+\end{equation*}
+\end{center}
+
+\begin{center}
+Równanie w dwóch liniach:
+\begin{align*}
+p(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3\\ 
+- 12x^2y^4 - 12xy^5 + 2y^6 - a^3b^3
+\end{align*}
+\end{center}
+\newpage
+
+\section{Wykorzystanie obrazka}
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=7cm]{logo}
+\caption{Logo Latex}{Przykładowe użycie obrazka}
+\label{rys_model}
+\end{center}
+\end{figure}
+
+\section{Bibliografia}
+\begin{thebibliography}{99}
+\bibitem{pa} Tobias Oetiker:
+Nie za krótkie wprowadzenie do systemu LaTeX
+\end{thebibliography}
+
+\end{document}
